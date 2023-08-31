@@ -1,11 +1,11 @@
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { App } from './App'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { App } from "./app/App";
 
 ReactDOM.hydrateRoot(
-  document.getElementById('app'),
+  document.getElementById("app"),
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-)
-console.log('hydrated')
+  </BrowserRouter>
+);
+console.log("hydrated");
