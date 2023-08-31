@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "dev": "NODE_ENV=development node server",
     "start": "NODE_ENV=production node server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
@@ -13,6 +13,11 @@
     "debug": "node --inspect-brk server"
   },
   "dependencies": {
+    "express-async-errors": "^3.1.1",
+    "express-oauth-server": "^2.0.0",
+    "mongoose": "^7.5.0",
+    "mongoose-unique-validator": "^4.0.0",
+    "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2"
@@ -20,6 +25,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
     "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "serve-static": "^1.15.0",
     "vite": "^4.4.5"
